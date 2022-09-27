@@ -4,3 +4,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .container-grid {
+    display: grid;
+    grid-template-columns: 17rem 1fr;
+  }
+}

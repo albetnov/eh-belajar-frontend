@@ -7,9 +7,9 @@ type Props = {
 
 export default function Template({ children }: Props) {
   return (
-    <>
+    <div className="sm:container-grid">
       <Navbar />
-      <div className={`ml-[${+300}px]`}>{children}</div>
-    </>
+      {children}
+    </div>
   );
 }
