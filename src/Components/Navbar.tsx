@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="h-screen fixed flex flex-col w-full sm:w-fit border border-red-500">
+    <div className="h-screen fixed flex flex-col w-full sm:w-fit">
       <div className="bg-slate-50 sm:bg-transparent pt-3 px-5 h-fit flex items-center sm:gap-3">
         <NavMenuToggle
           onClick={() => {
