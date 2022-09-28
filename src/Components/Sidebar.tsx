@@ -1,4 +1,12 @@
-import { HiHome, HiBookmark, HiChat, HiChartPie, HiCalendar, HiAdjustments } from "react-icons/hi";
+import {
+  HiHome,
+  HiBookmark,
+  HiChat,
+  HiChartPie,
+  HiCalendar,
+  HiAdjustments,
+  HiShoppingCart,
+} from "react-icons/hi";
 import SidebarList from "./SidebarList";
 import Typography from "./Typography";
 import MaBoyShitting from "../Assets/MaBoyShitting.png";
@@ -15,7 +23,7 @@ export default function Sidebar({ isExpanded }: Props) {
         isExpanded
           ? "opacity-1 bg-slate-50 sm:bg-transparent rounded w-64"
           : "opacity-0 w-0 sm:opacity-100 sm:w-64"
-      } sm:block px-5 h-full relative`}
+      } px-5 h-full sm:flex sm:flex-col sm:justify-between`}
     >
       <div className="flex flex-col gap-2 mt-5 px-2 py-3">
         <SidebarList icon={<HiHome />} text="Dashboard" isActive />
@@ -24,8 +32,9 @@ export default function Sidebar({ isExpanded }: Props) {
         <SidebarList icon={<HiChartPie />} text="Grades" />
         <SidebarList icon={<HiCalendar />} text="Schedules" />
         <SidebarList icon={<HiAdjustments />} text="Settings" />
+        <SidebarList premium icon={<HiShoppingCart />} text="Buy Premium" />
       </div>
-      <div className="mt-10 bg-secondary p-3 absolute bottom-5 left-0 m-3 rounded-lg">
+      <div className="hidden sm:block mt-10 bg-secondary p-3 rounded-lg">
         <img src={MaBoyShitting} alt="Someone sat." className="-mt-36 -z-10" />
         <Typography variant="body2" className="font-semibold text-center">
           Premium Subscriptions

@@ -9,6 +9,8 @@ module.exports = {
         secondary: "#e9e3ff",
         text: "#424040",
         background: "#fbfbfb",
+        light__primary: "#8f74db",
+        light__shadow__primary: "#b49dfa",
       },
       fontFamily: {
         lato: "Lato",

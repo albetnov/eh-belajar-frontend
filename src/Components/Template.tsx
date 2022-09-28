@@ -7,7 +7,7 @@ type Props = {
 
 export default function Template({ children }: Props) {
   return (
-    <div className="container-grid-mobile sm:container-grid">
+    <div className="grid container-grid-mobile sm:container-grid">
       <Navbar />
       {children}
     </div>
