@@ -34,7 +34,7 @@ export default function Sidebar({ isExpanded }: Props) {
         <SidebarList icon={<HiAdjustments />} text="Settings" />
         <SidebarList premium icon={<HiShoppingCart />} text="Buy Premium" />
       </div>
-      <div className="hidden sm:block mt-10 bg-secondary p-3 rounded-lg">
+      <div className="hidden sm:block mt-10 mb-3 bg-secondary p-3 rounded-lg">
         <img src={MaBoyShitting} alt="Someone sat." className="-mt-36 -z-10" />
         <Typography variant="body2" className="font-semibold text-center">
           Premium Subscriptions

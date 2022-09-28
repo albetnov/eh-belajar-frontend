@@ -12,19 +12,19 @@ const Typography: React.FC<Props> = ({ variant = "paragraph", className, childre
 
   switch (variant) {
     case "heading1":
-      return <h1 className={`text-slate-700 text-6xl ${classes}`}>{children}</h1>;
+      return <h1 className={`text-6xl ${classes}`}>{children}</h1>;
     case "heading2":
-      return <h2 className={`text-slate-700 text-4xl ${classes}`}>{children}</h2>;
+      return <h2 className={`text-4xl ${classes}`}>{children}</h2>;
     case "heading3":
-      return <h3 className={`text-slate-700 text-3xl ${classes}`}>{children}</h3>;
+      return <h3 className={`text-3xl ${classes}`}>{children}</h3>;
     case "body1":
-      return <h4 className={`text-slate-700 text-2xl ${classes}`}>{children}</h4>;
+      return <h4 className={`text-2xl ${classes}`}>{children}</h4>;
     case "body2":
-      return <h5 className={`text-slate-700 text-xl ${classes}`}>{children}</h5>;
+      return <h5 className={`text-xl ${classes}`}>{children}</h5>;
     case "large":
-      return <p className={`text-slate-700 text-lg ${classes}`}>{children}</p>;
+      return <p className={`text-lg ${classes}`}>{children}</p>;
     default:
-      return <p className={`text-slate-700 text-base ${classes}`}>{children}</p>;
+      return <p className={`text-base ${classes}`}>{children}</p>;
   }
 };
 

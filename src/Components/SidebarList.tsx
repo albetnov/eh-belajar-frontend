@@ -4,7 +4,7 @@ type Props = {
   icon: React.ReactNode;
   text: string;
   isActive?: boolean;
-  premium: boolean;
+  premium?: boolean;
 };
 
 const SidebarList: React.FC<Props> = ({ icon, text, isActive = false, premium = false }) => {
@@ -18,13 +18,15 @@ const SidebarList: React.FC<Props> = ({ icon, text, isActive = false, premium = 
 
   if (premium) {
     classes =
-      "hover:bg-light__primary hover:shadow-shadow__primary text-white shadow-lg shadow-light__shadow__primary bg-primary p-2 rounded-md font-medium flex items-center gap-4 hover:cursor-pointer transition-all delay-100 z-10";
+      "hover:bg-light__primary hover:shadow-shadow__primary text-white shadow-lg shadow-light__shadow__primary bg-primary p-2 rounded-md font-medium flex items-center gap-4 hover:cursor-pointer transition-all delay-100 z-10 sm:hidden";
   }
+
+  const fontColor = premium ? "text-white" : "text-slate-400";
 
   return (
     <div className={classes}>
       {icon}
-      <Typography className={isActive ? "font-semibold" : "text-slate-400"}>{text}</Typography>
+      <Typography className={isActive ? "font-semibold" : fontColor}>{text}</Typography>
     </div>
   );
 };

@@ -13,4 +13,8 @@
   .container-grid-mobile {
     grid-template-rows: 5rem 1fr;
   }
+
+  .sidebar__wrapper__height {
+    height: calc(100vh - 4rem);
+  }
 }

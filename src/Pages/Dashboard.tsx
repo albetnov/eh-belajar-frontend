@@ -1,23 +1,45 @@
-import Container from "../Components/Container";
+import CourseCard from "../Components/CourseCard";
 import Template from "../Components/Template";
 import Typography from "../Components/Typography";
 
 export default function Dashboard() {
   return (
-    <Template>
-      <Container>
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quasi saepe commodi
-          velit, magni vero quaerat repellat eaque sit voluptate. Facere delectus ratione quod eos.
-          Expedita sint harum perspiciatis id, accusantium voluptatum voluptatibus neque laborum
-          impedit architecto facilis asperiores totam delectus iusto veritatis, modi iste aut
-          voluptate earum fuga facere dolores natus non voluptatem. Delectus sint ea doloribus
-          labore. Nesciunt exercitationem veniam cum hic. Dolorem provident quae expedita ratione
-          sit, odit molestiae, illum consequatur beatae error numquam temporibus fuga ad blanditiis
-          nostrum et porro fugit voluptas magni cupiditate, eos eaque quia ea? Enim dolor vitae
-          corporis rerum dicta voluptas aspernatur.
-        </Typography>
-      </Container>
+    <Template breadcrumbs={["Dashboard"]}>
+      <Typography variant="body2" className="mt-3">
+        New Courses
+      </Typography>
+      <div className="mt-10 flex flex-col gap-7 md:flex-row justify-center">
+        <CourseCard bgType="bg-amber" image="https://source.unsplash.com/300x300?program">
+          <Typography variant="body2" className="font-bold">
+            Geography
+          </Typography>
+          <Typography className="text-slate-500">12 Lessons</Typography>
+        </CourseCard>
+        <CourseCard bgType="bg-amber" image="https://source.unsplash.com/300x300?program">
+          <Typography variant="body2" className="font-bold">
+            Geography
+          </Typography>
+          <Typography className="text-slate-500">12 Lessons</Typography>
+        </CourseCard>
+        <CourseCard bgType="bg-amber" image="https://source.unsplash.com/300x300?program">
+          <Typography variant="body2" className="font-bold">
+            Geography
+          </Typography>
+          <Typography className="text-slate-500">12 Lessons</Typography>
+        </CourseCard>
+        <CourseCard bgType="bg-amber" image="https://source.unsplash.com/300x300?program">
+          <Typography variant="body2" className="font-bold">
+            Geography
+          </Typography>
+          <Typography className="text-slate-500">12 Lessons</Typography>
+        </CourseCard>
+        <CourseCard bgType="bg-amber" image="https://source.unsplash.com/300x300?program">
+          <Typography variant="body2" className="font-bold">
+            Geography
+          </Typography>
+          <Typography className="text-slate-500">12 Lessons</Typography>
+        </CourseCard>
+      </div>
     </Template>
   );
 }
