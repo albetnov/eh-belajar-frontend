@@ -5,13 +5,16 @@ import { HiArrowRight } from "react-icons/hi";
 type CourseCardProps = {
   children: React.ReactNode;
   image: string;
-  bgType: string;
+  bgType: {
+    bgDrop: string;
+    bg: string;
+  };
 };
 
 const CourseCard: React.FC<CourseCardProps> = ({ children, image, bgType }) => {
   return (
-    <Card className={`${bgType}-100`}>
-      <div className={`${bgType}-200 opacity-90 rounded-lg p-3 lg:p-5 xl:p-10 my-3`}>
+    <Card className={bgType.bgDrop}>
+      <div className={`${bgType.bg} opacity-90 rounded-lg p-3 lg:p-5 xl:p-10 my-3`}>
         <img src={image} alt="Program" className="w-36 lg:w-32 mx-auto -rotate-6" />
       </div>
       {children}
@@ -30,7 +33,9 @@ const CourseCard: React.FC<CourseCardProps> = ({ children, image, bgType }) => {
             className="w-7 rounded-full absolute top-1 left-9"
           />
         </div>
-        <button className="p-3 text-white font-semibold text-lg rounded-xl bg-amber-200 hover:shadow-lg active:opacity-80">
+        <button
+          className={`p-3 text-white font-semibold text-lg rounded-xl ${bgType.bg} hover:shadow-lg active:opacity-80`}
+        >
           <HiArrowRight />
         </button>
       </div>
