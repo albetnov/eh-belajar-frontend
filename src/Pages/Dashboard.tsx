@@ -4,7 +4,7 @@ import RoundButton from "../Components/RoundButton";
 import Template from "../Components/Template";
 import Typography from "../Components/Typography";
 import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
+// import "react-calendar/dist/Calendar.css";
 
 export default function Dashboard() {
   return (
