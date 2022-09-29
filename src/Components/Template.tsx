@@ -21,7 +21,7 @@ export default function Template({ children, breadcrumbs }: Props) {
     <div className="grid container-grid-mobile sm:container-grid">
       <Navbar />
       <Container>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-col sm:flex-row gap-3 sm:gap-0">
           <Typography variant="heading3" className="text-slate-500">
             {parsedBreadcrumbs()}
           </Typography>

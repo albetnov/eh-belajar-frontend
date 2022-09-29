@@ -30,7 +30,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ children, image, bgType }) => {
             className="w-7 rounded-full absolute top-1 left-9"
           />
         </div>
-        <button className="p-3 rounded-xl bg-amber-200 hover:shadow-lg active:opacity-80">
+        <button className="p-3 text-white font-semibold text-lg rounded-xl bg-amber-200 hover:shadow-lg active:opacity-80">
           <HiArrowRight />
         </button>
       </div>

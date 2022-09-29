@@ -1,5 +1,6 @@
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { HiBell, HiSearch } from "react-icons/hi";
+import RoundButton from "./RoundButton";
 
 const Searchbar = () => {
   const [expand, toggleExpand] = useState(false);
@@ -10,7 +11,6 @@ const Searchbar = () => {
   };
 
   const enableExpand = (event: React.MouseEvent<HTMLDivElement>) => {
-    console.log("I am listening");
     event.stopPropagation();
     if (expand) {
       return;
@@ -34,7 +34,7 @@ const Searchbar = () => {
     <div className="flex gap-7 w-full justify-end">
       <div
         className={`rounded-full shadow-lg p-3 text-zinc-700 transition-all delay-100 ${
-          expand ? "w-1/5 flex items-center gap-3" : "w-10 hover:cursor-pointer"
+          expand ? "w-1/2 sm:w-1/5 flex items-center gap-3" : "w-10 hover:cursor-pointer"
         }`}
         onClick={enableExpand}
         tabIndex={1}
@@ -44,9 +44,7 @@ const Searchbar = () => {
           <input ref={searchRef} className="w-full bg-transparent h-full focus:outline-none" />
         )}
       </div>
-      <button className="shadow-lg rounded-xl p-3">
-        <HiBell className="text-slate-700" />
-      </button>
+      <RoundButton icon={<HiBell />} />
     </div>
   );
 };

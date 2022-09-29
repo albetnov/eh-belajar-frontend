@@ -1,5 +1,15 @@
+import React from "react";
+
 type Props = {
-  variant?: "heading1" | "heading2" | "heading3" | "body1" | "body2" | "large" | "paragraph";
+  variant?:
+    | "heading1"
+    | "heading2"
+    | "heading3"
+    | "body1"
+    | "body2"
+    | "large"
+    | "paragraph"
+    | "small";
   className?: string;
   children: React.ReactNode | string;
 };
@@ -23,6 +33,8 @@ const Typography: React.FC<Props> = ({ variant = "paragraph", className, childre
       return <h5 className={`text-xl ${classes}`}>{children}</h5>;
     case "large":
       return <p className={`text-lg ${classes}`}>{children}</p>;
+    case "small":
+      return <p className={`text-sm ${classes}`}>{children}</p>;
     default:
       return <p className={`text-base ${classes}`}>{children}</p>;
   }
