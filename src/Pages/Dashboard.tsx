@@ -1,64 +1,156 @@
-import { HiBadgeCheck, HiPencil } from "react-icons/hi";
+import { HiOutlineTemplate } from "react-icons/hi";
 import CourseCard from "../Components/CourseCard";
-import RoundButton from "../Components/RoundButton";
+import CourseTableItem from "../Components/CourseTableItem";
+import TableData from "../Components/TableData";
+import TableHead from "../Components/TableHead";
 import Template from "../Components/Template";
 import Typography from "../Components/Typography";
-import Calendar from "react-calendar";
-import HomeworkProgress from "../Components/HomeworkProgress";
+import { DiDocker, DiGit, DiLaravel, DiLinux, DiNodejs, DiReact } from "react-icons/di";
+import TableRow from "../Components/TableRow";
 
 export default function Dashboard() {
   return (
     <Template breadcrumbs={"Dashboard"}>
-      <div className="grid lg:grid-cols-3 sm:grid-rows-1">
-        <div className="col-span-2">
-          <Typography variant="body2" className="mt-3">
-            New Courses
-          </Typography>
-          <div className="mt-10 flex flex-col flex-wrap gap-7 md:flex-row justify-center">
-            {[1, 2, 3].map((item, index) => {
-              return (
-                <CourseCard
-                  key={index}
-                  bgType={{ bgDrop: "bg-amber-100", bg: "bg-amber-300" }}
-                  image="https://source.unsplash.com/300x300?program"
-                >
-                  <Typography variant="body2" className="font-bold">
-                    Geography
-                  </Typography>
-                  <Typography className="text-slate-500">12 Lessons</Typography>
-                </CourseCard>
-              );
-            })}
-          </div>
+      <Typography variant="body2" className="mt-5">
+        New Courses
+      </Typography>
+      <div className="mt-5 flex flex-col flex-wrap gap-7 md:flex-row justify-center">
+        <CourseCard
+          bgType={{
+            bgDrop: "bg-amber-100",
+            bg: "bg-amber-300",
+            shadow: "hover:shadow-amber-400",
+          }}
+          imageIcon={<DiLinux className="text-orange-700 sm:h-20 text-9xl md:text-8xl mx-auto" />}
+          lessonCount={32}
+          title="Linux Made Easy!"
+        />
+        <CourseCard
+          bgType={{
+            bgDrop: "bg-rose-100",
+            bg: "bg-rose-300",
+            shadow: "hover:shadow-rose-400",
+          }}
+          imageIcon={<DiLaravel className="text-red-700 sm:h-20 text-9xl md:text-8xl mx-auto" />}
+          lessonCount={70}
+          title="The Artisans: Laravel"
+        />
+        <CourseCard
+          bgType={{
+            bgDrop: "bg-sky-100",
+            bg: "bg-sky-300",
+            shadow: "hover:shadow-sky-400",
+          }}
+          imageIcon={<DiDocker className="text-blue-700 sm:h-20 text-9xl md:text-8xl mx-auto" />}
+          lessonCount={70}
+          title="A Ocean Whale: Docker"
+        />
+      </div>
+      <div className="mt-10 p-5">
+        <div className="flex justify-between">
+          <Typography variant="body2">My Courses</Typography>
+          <a href="#">
+            <Typography className="text-primary">View All</Typography>
+          </a>
         </div>
-        <div className="hidden sm:block p-3">
-          <div className="grid grid-cols-2 items-center">
-            <Typography variant="body2">Profile</Typography>
-            <RoundButton icon={<HiPencil />} className="justify-self-end" />
-          </div>
-          <div className="grid justify-center mt-5">
-            <img
-              src="https://source.unsplash.com/300x300?potrait"
-              className="mx-auto w-24 rounded-full"
-            />
-            <div className="flex w-full mt-3 gap-2 justify-center items-center">
-              <Typography variant="large">Asep Surasep</Typography>
-              <HiBadgeCheck className="text-primary" />
-            </div>
-            <Typography variant="small" className="text-center text-slate-500">
-              Elementary
-            </Typography>
-            <Calendar className="my-3" value={new Date()} />
-            <div className="flex gap-2 flex-col">
-              <Typography variant="large" className="mt-3">
-                Homework Progress
-              </Typography>
-              <HomeworkProgress percent={30} isActive title="Styling with css" taskCount={3} />
-              <HomeworkProgress percent={50} title="Styling with css" taskCount={3} />
-              <HomeworkProgress percent={100} title="Styling with css" taskCount={3} />
-            </div>
-          </div>
-        </div>
+        <table className="w-full table-auto">
+          <thead>
+            <tr className="text-slate-400">
+              <TableHead>Course Name</TableHead>
+              <TableHead>Start</TableHead>
+              <TableHead>Rate</TableHead>
+              <TableHead>Level</TableHead>
+            </tr>
+          </thead>
+          <tbody>
+            <TableRow>
+              <TableData>
+                <CourseTableItem
+                  Icon={HiOutlineTemplate}
+                  courseName="Web Design"
+                  lessonCount={12}
+                />
+              </TableData>
+              <TableData>
+                <Typography>12 May</Typography>
+              </TableData>
+              <TableData>
+                <Typography>4.8</Typography>
+              </TableData>
+              <TableData>
+                <Typography>ELementary</Typography>
+              </TableData>
+            </TableRow>
+            <TableRow>
+              <TableData>
+                <CourseTableItem Icon={DiGit} courseName="Git EZ PZ" lessonCount={3} />
+              </TableData>
+              <TableData>
+                <Typography>10 Apr</Typography>
+              </TableData>
+              <TableData>
+                <Typography>4.2</Typography>
+              </TableData>
+              <TableData>
+                <Typography>Elementary</Typography>
+              </TableData>
+            </TableRow>
+            <TableRow>
+              <TableData>
+                <CourseTableItem
+                  Icon={DiReact}
+                  courseName="Introduction into React"
+                  lessonCount={30}
+                />
+              </TableData>
+              <TableData>
+                <Typography>12 Dec</Typography>
+              </TableData>
+              <TableData>
+                <Typography>4.9</Typography>
+              </TableData>
+              <TableData>
+                <Typography>Intermediate</Typography>
+              </TableData>
+            </TableRow>
+            <TableRow>
+              <TableData>
+                <CourseTableItem
+                  Icon={DiNodejs}
+                  courseName="Node JS: JavaScript on the fly"
+                  lessonCount={40}
+                />
+              </TableData>
+              <TableData>
+                <Typography>17 Aug</Typography>
+              </TableData>
+              <TableData>
+                <Typography>4.3</Typography>
+              </TableData>
+              <TableData>
+                <Typography>Elementary</Typography>
+              </TableData>
+            </TableRow>
+            <TableRow>
+              <TableData>
+                <CourseTableItem
+                  Icon={DiLinux}
+                  courseName="Linux and why developers love them."
+                  lessonCount={64}
+                />
+              </TableData>
+              <TableData>
+                <Typography>1 Jan</Typography>
+              </TableData>
+              <TableData>
+                <Typography>4.5</Typography>
+              </TableData>
+              <TableData>
+                <Typography>Elementary</Typography>
+              </TableData>
+            </TableRow>
+          </tbody>
+        </table>
       </div>
     </Template>
   );

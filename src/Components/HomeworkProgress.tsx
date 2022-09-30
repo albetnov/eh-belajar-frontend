@@ -23,13 +23,12 @@ const HomeworkProgress: React.FC<HomeworkProgressProps> = ({
     <div
       className={`p-3 ${
         isActive ? "bg-primary" : "bg-transparent shadow-lg"
-      } rounded-lg flex justify-between items-center`}
+      } rounded-lg flex justify-between items-center group hover:cursor-pointer`}
     >
       <div
         x-data="scrollProgress"
         className="relative inline-flex items-center justify-center overflow-hidden rounded-full rotate-90"
       >
-        {/* <!-- Building a Progress Ring: https://css-tricks.com/building-progress-ring-quickly/ --> */}
         <svg className="w-16 h-16">
           <circle
             className="text-gray-300 fill-transparent stroke-white"
@@ -66,7 +65,7 @@ const HomeworkProgress: React.FC<HomeworkProgressProps> = ({
         </Typography>
       </div>
       <HiArrowRight
-        className={`${fontColor} text-lg mr-3 hover:cursor-pointer transition-all delay-100 hover:translate-x-3`}
+        className={`${fontColor} text-lg mr-3 transition-all delay-100 group-hover:translate-x-3`}
       />
     </div>
   );
