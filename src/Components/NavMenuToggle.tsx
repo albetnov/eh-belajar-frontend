@@ -17,7 +17,7 @@ const NavMenuToggle: React.FC<Props> = ({ onClick, isExpanded }) => {
   //   </button>
   // );
   return (
-    <div className="min-w-[100vw] w-full p-3 h-16 fixed z-10 bg-transparent backdrop-blur-md sm:backdrop-blur-none sm:w-fit flex items-center">
+    <div className="min-w-[100vw] sm:min-w-0 w-full p-3 h-16 fixed z-10 bg-transparent backdrop-blur-md sm:backdrop-blur-none sm:w-fit flex items-center">
       <button
         onClick={onClick}
         className="sm:hidden shadow border border-transparent p-3 rounded-full text-slate-600 hover:border-primary focus:outline-none z-20"
