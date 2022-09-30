@@ -33,7 +33,7 @@ export default function Navbar() {
         }}
         isExpanded={isExpanded}
       />
-      <div className="mt-[2.7rem] sidebar__wrapper__height z-10 fixed">
+      <div className="mt-[2.7rem] sidebar__wrapper__height sm:sidebar__wrapper__reset z-10 fixed">
         <Sidebar isExpanded={isExpanded} />
       </div>
     </>
