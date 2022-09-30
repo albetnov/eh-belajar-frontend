@@ -32,17 +32,17 @@ const HomeworkProgress: React.FC<HomeworkProgressProps> = ({
         <svg className="w-16 h-16">
           <circle
             className="text-gray-300 fill-transparent stroke-white"
-            stroke-width="5"
+            strokeWidth="5"
             r="25"
             cx="35"
             cy="35"
           />
           <circle
             className={isActive ? "text-secondary" : "text-primary"}
-            stroke-width="5"
-            stroke-dasharray={circleReferece}
-            stroke-dashoffset={circleReferece - (percent / 100) * circleReferece}
-            stroke-linecap="round"
+            strokeWidth="5"
+            strokeDasharray={circleReferece}
+            strokeDashoffset={circleReferece - (percent / 100) * circleReferece}
+            strokeLinecap="round"
             stroke="currentColor"
             fill="transparent"
             r="25"

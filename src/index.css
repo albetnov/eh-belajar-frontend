@@ -15,7 +15,8 @@
   }
 
   .sidebar__wrapper__height {
-    height: calc(100vh - 4rem);
+    min-height: calc(100vw - 4rem);
+    height: 100%;
   }
 }
 

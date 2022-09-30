@@ -10,7 +10,7 @@ type Props = {
 
 const SidebarList: React.FC<Props> = ({ icon, text, isActive = false, premium = false }) => {
   let classes =
-    "p-2 rounded-md font-medium flex items-center gap-4 hover:cursor-pointer transition-all delay-100 z-10";
+    "p-3 sm:p-2 rounded-md font-medium flex items-center gap-4 hover:cursor-pointer transition-all delay-100 z-10";
   if (isActive) {
     classes += " bg-secondary";
   } else {
@@ -19,7 +19,7 @@ const SidebarList: React.FC<Props> = ({ icon, text, isActive = false, premium = 
 
   if (premium) {
     classes =
-      "hover:bg-light__primary hover:shadow-shadow__primary text-white shadow-lg shadow-light__shadow__primary bg-primary p-2 rounded-md font-medium flex items-center gap-4 hover:cursor-pointer transition-all delay-100 z-10 sm:hidden";
+      "hover:bg-light__primary hover:shadow-shadow__primary text-white shadow-lg shadow-light__shadow__primary bg-primary p-3 sm:p-2 rounded-md font-medium flex items-center gap-4 hover:cursor-pointer transition-all delay-100 z-10 sm:hidden";
   }
 
   const fontColor = premium ? "text-white" : "text-slate-400";

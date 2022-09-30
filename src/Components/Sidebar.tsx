@@ -25,7 +25,7 @@ export default function Sidebar({ isExpanded }: Props) {
           : "opacity-0 w-0 sm:opacity-100 sm:w-64"
       } px-5 h-full sm:flex sm:flex-col sm:justify-between`}
     >
-      <div className="flex flex-col gap-2 mt-5 px-2 py-3">
+      <div className="flex flex-col gap-5 sm:gap-2 mt-5 px-2 py-3">
         <SidebarList icon={<HiHome />} text="Dashboard" isActive />
         <SidebarList icon={<HiBookmark />} text="Courses" />
         <SidebarList icon={<HiChat />} text="Chats" />
