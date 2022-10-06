@@ -5,7 +5,7 @@ type Props = {
   className?: string;
 };
 
-const Button: React.FC<Props> = forwardRef(({ children, className }, ref) => {
+const Button: React.FC<Props> = forwardRef(({ children, className = "" }, ref) => {
   const classes =
     className?.includes("bg-") ||
     (className?.includes("text-") && !className.includes("text-center"))

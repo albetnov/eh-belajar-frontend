@@ -14,7 +14,7 @@ type Props = {
   children: React.ReactNode | string;
 };
 
-const Typography: React.FC<Props> = ({ variant = "paragraph", className, children }) => {
+const Typography: React.FC<Props> = ({ variant = "paragraph", className = "", children }) => {
   const classes =
     className?.includes("text-") && !className?.includes("text-center")
       ? className
