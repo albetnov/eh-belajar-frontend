@@ -46,7 +46,7 @@ export default function Dashboard() {
           title="A Ocean Whale: Docker"
         />
       </div>
-      <div className="mt-10 p-5">
+      <div className="mt-10 p-5 overflow-x-auto">
         <div className="flex justify-between">
           <Typography variant="body2">My Courses</Typography>
           <a href="#">

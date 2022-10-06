@@ -25,7 +25,7 @@ export default function Template({ children, breadcrumbs }: Props) {
     <div className="grid container-grid-mobile sm:container-grid">
       <Navbar />
       <Container>
-        <div className="grid lg:grid-cols-3 sm:grid-rows-1">
+        <div className="grid grid-cols-1 lg:grid-cols-3">
           <div className="col-span-2">
             <div className="flex items-center justify-between flex-col sm:flex-row gap-3 sm:gap-0">
               <Typography variant="heading3" className="text-slate-500">
